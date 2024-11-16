@@ -1,0 +1,8 @@
+{
+  "type": "model-python",
+  "require": {
+    "typehub/typeschema": {
+      "target": "./src/model"
+    }
+  }
+}
