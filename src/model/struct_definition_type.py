@@ -6,7 +6,7 @@ from .reference_property_type import ReferencePropertyType
 from .property_type import PropertyType
 
 
-# A struct represents a class/structure with a fix set of defined properties.
+# A struct represents a class/structure with a fix set of defined properties
 class StructDefinitionType(DefinitionType):
     base: Optional[bool] = Field(default=None, alias="base")
     discriminator: Optional[str] = Field(default=None, alias="discriminator")
