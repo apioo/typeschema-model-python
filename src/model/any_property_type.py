@@ -6,6 +6,7 @@ from .property_type import PropertyType
 
 # Represents an any value which allows any kind of value
 class AnyPropertyType(PropertyType):
+    type: Optional[str] = Field(default="any", alias="type")
     pass
 
 

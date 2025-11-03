@@ -8,6 +8,7 @@ from .property_type import PropertyType
 class ReferencePropertyType(PropertyType):
     target: Optional[str] = Field(default=None, alias="target")
     template: Optional[Dict[str, str]] = Field(default=None, alias="template")
+    type: Optional[str] = Field(default="reference", alias="type")
     pass
 
 

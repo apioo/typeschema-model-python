@@ -6,6 +6,7 @@ from .scalar_property_type import ScalarPropertyType
 
 # Represents a boolean value
 class BooleanPropertyType(ScalarPropertyType):
+    type: Optional[str] = Field(default="boolean", alias="type")
     pass
 
 

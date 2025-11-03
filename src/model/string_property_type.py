@@ -8,6 +8,7 @@ from .scalar_property_type import ScalarPropertyType
 class StringPropertyType(ScalarPropertyType):
     default: Optional[str] = Field(default=None, alias="default")
     format: Optional[str] = Field(default=None, alias="format")
+    type: Optional[str] = Field(default="string", alias="type")
     pass
 
 

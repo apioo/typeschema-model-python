@@ -22,6 +22,7 @@ class StructDefinitionType(DefinitionType):
     mapping: Optional[Dict[str, str]] = Field(default=None, alias="mapping")
     parent: Optional[ReferencePropertyType] = Field(default=None, alias="parent")
     properties: Optional[Dict[str, Annotated[Union[Annotated[AnyPropertyType, Tag('any')], Annotated[ArrayPropertyType, Tag('array')], Annotated[BooleanPropertyType, Tag('boolean')], Annotated[GenericPropertyType, Tag('generic')], Annotated[IntegerPropertyType, Tag('integer')], Annotated[MapPropertyType, Tag('map')], Annotated[NumberPropertyType, Tag('number')], Annotated[ReferencePropertyType, Tag('reference')], Annotated[StringPropertyType, Tag('string')]], Field(discriminator='type')]]] = Field(default=None, alias="properties")
+    type: Optional[str] = Field(default="struct", alias="type")
     pass
 
 
