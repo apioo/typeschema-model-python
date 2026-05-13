@@ -1,14 +1,14 @@
 from pydantic import BaseModel, Field, GetCoreSchemaHandler, Tag
 from pydantic_core import CoreSchema, core_schema
-from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
+from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union, Literal
 
 
-# Base property type
+# The base abstract type for all property definitions within a struct or collection.
 class PropertyType(BaseModel):
     deprecated: Optional[bool] = Field(default=None, alias="deprecated")
     description: Optional[str] = Field(default=None, alias="description")
     nullable: Optional[bool] = Field(default=None, alias="nullable")
-    type: Optional[str] = Field(default=None, alias="type")
+    type: str = Field(alias="type")
     pass
 
 

@@ -1,12 +1,12 @@
 from pydantic import BaseModel, Field, GetCoreSchemaHandler, Tag
 from pydantic_core import CoreSchema, core_schema
-from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
+from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union, Literal
 from .scalar_property_type import ScalarPropertyType
 
 
-# Represents a boolean value
+# Represents a true or false value.
 class BooleanPropertyType(ScalarPropertyType):
-    type: Optional[str] = Field(default="boolean", alias="type")
+    type: Literal["boolean"] = Field(alias="type")
     pass
 
 
