@@ -4,9 +4,8 @@ from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
 from .collection_definition_type import CollectionDefinitionType
 
 
-# An object with a dynamic set of keys where every value conforms to the same schema.
+# Represents a key-value map with dynamic key names where all values conform to the same schema.
 class MapDefinitionType(CollectionDefinitionType):
     type: Literal["map"] = Field(alias="type")
-    pass
 
 

@@ -4,8 +4,7 @@ from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
 from .property_type import PropertyType
 
 
-# Abstract base for simple value types like strings, numbers, and booleans.
+# The abstract base type for simple scalar value properties (strings, integers, numbers, booleans).
 class ScalarPropertyType(PropertyType):
-    pass
 
 

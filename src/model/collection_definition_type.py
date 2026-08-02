@@ -14,9 +14,8 @@ from .reference_property_type import ReferencePropertyType
 from .string_property_type import StringPropertyType
 
 
-# Abstract base for definitions that hold multiple values of a single type, such as arrays or maps.
+# The abstract base type for collection definitions that contain multiple elements of a uniform type.
 class CollectionDefinitionType(DefinitionType):
     schema_: Annotated[Union["AnyPropertyType", "ArrayPropertyType", "BooleanPropertyType", "GenericPropertyType", "IntegerPropertyType", "MapPropertyType", "NumberPropertyType", "ReferencePropertyType", "StringPropertyType"], Field(discriminator="type")] = Field(alias="schema")
-    pass
 
 

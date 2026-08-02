@@ -4,9 +4,8 @@ from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
 from .collection_property_type import CollectionPropertyType
 
 
-# A property containing a map of dynamic keys to a consistent value type.
+# Represents a property containing a key-value map where all values share the same schema.
 class MapPropertyType(CollectionPropertyType):
     type: Literal["map"] = Field(alias="type")
-    pass
 
 

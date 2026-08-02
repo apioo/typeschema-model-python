@@ -13,9 +13,8 @@ from .reference_property_type import ReferencePropertyType
 from .string_property_type import StringPropertyType
 
 
-# Abstract base for properties that reference inline maps or arrays.
+# The abstract base type for properties that define inline collections (maps or arrays).
 class CollectionPropertyType(PropertyType):
     schema_: Annotated[Union["AnyPropertyType", "ArrayPropertyType", "BooleanPropertyType", "GenericPropertyType", "IntegerPropertyType", "MapPropertyType", "NumberPropertyType", "ReferencePropertyType", "StringPropertyType"], Field(discriminator="type")] = Field(alias="schema")
-    pass
 
 

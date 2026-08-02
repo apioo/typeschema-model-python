@@ -4,9 +4,8 @@ from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
 from .property_type import PropertyType
 
 
-# A wildcard property that accepts any valid JSON value (object, array, string, etc.).
+# Represents a wildcard property that accepts any valid JSON value (object, array, string, number, boolean, or null).
 class AnyPropertyType(PropertyType):
     type: Literal["any"] = Field(alias="type")
-    pass
 
 

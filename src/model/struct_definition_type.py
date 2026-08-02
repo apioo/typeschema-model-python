@@ -14,7 +14,7 @@ from .number_property_type import NumberPropertyType
 from .string_property_type import StringPropertyType
 
 
-# Represents a fixed-structure object (class/record). It supports inheritance and explicit property definitions.
+# Represents an object with a fixed set of properties (such as a class or record). Supports inheritance and explicit property typing.
 class StructDefinitionType(DefinitionType):
     type: Literal["struct"] = Field(alias="type")
     base: Optional[bool] = Field(default=None, alias="base")
@@ -22,6 +22,5 @@ class StructDefinitionType(DefinitionType):
     mapping: Optional[Dict[str, str]] = Field(default=None, alias="mapping")
     parent: Optional[ReferencePropertyType] = Field(default=None, alias="parent")
     properties: Dict[str, Annotated[Union["AnyPropertyType", "ArrayPropertyType", "BooleanPropertyType", "GenericPropertyType", "IntegerPropertyType", "MapPropertyType", "NumberPropertyType", "ReferencePropertyType", "StringPropertyType"], Field(discriminator="type")]] = Field(alias="properties")
-    pass
 
 

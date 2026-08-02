@@ -4,9 +4,8 @@ from typing import Any, Dict, Generic, List, Optional, TypeVar, Annotated, Union
 from .scalar_property_type import ScalarPropertyType
 
 
-# Represents a true or false value.
+# Represents a boolean true or false value.
 class BooleanPropertyType(ScalarPropertyType):
     type: Literal["boolean"] = Field(alias="type")
-    pass
 
 
